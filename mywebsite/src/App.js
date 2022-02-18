@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 
 function App() {
+  // State
+  const [todos, setTodos] = useState([]);
+
+  // Binding
+  const todoText = useRef();
+
+  // Side Effects / Lifecycle
+  useEffect(() => {
+    const existingTodos = localStorage.getItem('todos');
+    setTodos(existingTodos ? JSON.parse(existingTodos) : []);
+  }, []);
+
+  // Events
+  function addTodo(event) {
+    event.preventDefault();
+    const next = [...todos, todoText.current.value];
+    setTodos(next);
+    localStorage.setItem('todos', JSON.stringify(next));
+  }
+
+  function clearStorage(event) {
+    localStorage.clear();
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ul>
+        {todos.map(todo => (<li key={todo}>{todo}</li>))}  
+      </ul>
+
+      <form onSubmit={addTodo}>
+        <input type="text" placeholder="What needs to be done?" ref={todoText} />
+        <input type="submit" value="Add Todo" />
+      </form>
+
+      <form onSubmit={clearStorage}>
+        <input type="submit" value="Clear All" />
+      </form>
     </div>
   );
 }

@@ -73,7 +73,7 @@
     </header>
     <main>
         <h1 class="">
-            Hello. My Name is Maximilian Weber, I am 19 years old and a software developer based in Osnabrueck, Germany.
+            Hello. My Name is Maximilian Weber and I am a software developer.
         </h1>
         <h2>
             Use the Terminal to navigate in the menu
@@ -81,14 +81,33 @@
         <p>
             Choose between the commands:
             <a class="w-600">About</a>,
-            <a class="w-600">Projects</a>,
+            <a class="w-600">Projects</a> &
             <a class="w-600">Contact</a>
         </p>
-        <div class="terminal">
+        <p>Press Enter to submit</p>
+        <div class="terminal" onclick="inputfocus();">
             <div class="terminal__head">
                 <div class="terminal__head__dot bg-color__red"></div>
                 <div class="terminal__head__dot bg-color__yellow"></div>
                 <div class="terminal__head__dot bg-color__green"></div>
+            </div>
+            <div class="terminal__output">
+                <div class="terminal__output__about" id="about">
+                    About
+                </div>
+                <div class="terminal__output__projects" id="projects">
+                    Projects
+                </div>
+                <div class="terminal__output__contact" id="contact">
+                    Contact
+                </div>
+                <div class="terminal__output__fail" id="fail"></div>
+            </div>
+            <div class="terminal__input">
+                <div class="terminal__input__prompt">
+                    <span class="t-color__java-green">you@maximilianweber.com</span>:<span class="t-color__light-blue">~</span>$
+                </div>
+                <input id="input" type="text" maxlength="70" alt="terminal input" autofocus>
             </div>
         </div>
     </main>

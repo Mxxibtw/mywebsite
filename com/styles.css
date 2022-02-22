@@ -1,6 +1,39 @@
 :root {
     --color-main-background: #ededed;
     --color-main-font: #2a2a2a;
+    --family-main-font: "Fira Code";
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("./fonts/fira_code/FiraCode-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("./fonts/fira_code/FiraCode-Medium.ttf") format("ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("./fonts/fira_code/FiraCode-Bold.ttf") format("ttf");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fira Code";
+    src: url("./fonts/fira_code/FiraCode-SemiBold.ttf") format("ttf");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
 }
 
 * {
@@ -31,4 +64,11 @@ body {
 .a--reset, .a--reset:hover, .a--reset:active, .a--reset:visited, .a--reset:focus {
     color: inherit;
     text-decoration: inherit;
+}
+
+.svg__lang {
+    height: 3rem;
+    width: auto;
+    border: #2a2a2a solid .2rem;
+    border-radius: .5rem;
 }

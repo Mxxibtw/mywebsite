@@ -28,7 +28,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.a {
+.a--reset, .a--reset:hover, .a--reset:active, .a--reset:visited, .a--reset:focus {
     color: inherit;
     text-decoration: inherit;
 }

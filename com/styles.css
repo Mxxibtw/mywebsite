@@ -41,6 +41,7 @@
     --color-green: #2ACA44;
     --color-java-green: #8AE234;
     --color-light-blue: #729FCF;
+    --color-twitter-blue: #1DA1F2;
     --family-main-font: 'Fira Code', Ariel, sans-serif;
 }
 
@@ -160,6 +161,10 @@ input.valid {
 
 .fill--color-main {
     fill: var(--color-main-background);
+}
+
+.fill--color-main:hover {
+    fill: var(--color-twitter-blue);
 }
 
 .svg__lang {

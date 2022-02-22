@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Regular.ttf') format('trueType');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Medium.ttf') format('trueType');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-SemiBold.ttf') format('trueType');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Bold.ttf') format('trueType');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --color-main-background: #ededed;
     --color-main-font: #2a2a2a;
@@ -6,39 +38,7 @@
     --color-red: #FF5F5A;
     --color-yellow: #FFBE2E;
     --color-green: #2ACA44;
-    --family-main-font: "Fira Code";
-}
-
-@font-face {
-    font-family: "Fira Code";
-    src: url("./fonts/fira_code/FiraCode-Regular.ttf") format("ttf/otf");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Fira Code";
-    src: url("./fonts/fira_code/FiraCode-Medium.ttf") format("ttf/otf");
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Fira Code";
-    src: url("./fonts/fira_code/FiraCode-Bold.ttf") format("ttf/otf");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Fira Code";
-    src: url("./fonts/fira_code/FiraCode-SemiBold.ttf") format("ttf/otf");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    --family-main-font: 'Fira Code', Ariel, sans-serif;
 }
 
 * {

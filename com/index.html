@@ -5,6 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="lightweight portfolio of Maximilian Weber | Software Developer | 19 years old | Osnabrueck, Germany">
+    <meta property="og:image" content="#">
+    <meta name="language" content="EN">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Software Developer">
+    <meta name="author" content="Maximilian Weber">
+    <meta name="application-name" content="Portfolio">
+
+    <link rel="canonical" href="http://maximilianweber.com">
+    <link rel="alternate" href="http://maximilianweber.de" hreflang="DE">
+    <link rel="shortcut icon" href="#">
+    <link rel="apple-touch-icon" href="#">
+
+    <!-- <link rel="preload" href="./fonts/fira_code/FiraCode-Regular.ttf" as="font" type="font/tff" crossorigin>
+    <link rel="preload" href="./fonts/fira_code/FiraCode-Medium.ttf" as="font" type="font/tff" crossorigin>
+    <link rel="preload" href="./fonts/fira_code/FiraCode-SemiBold.ttf" as="font" type="font/tff" crossorigin>
+    <link rel="preload" href="./fonts/fira_code/FiraCode-Bold.ttf" as="font" type="font/tff" crossorigin> -->
+
     <link rel="stylesheet" href="./styles.css">
     <script src="./app.js"></script>
     <title>Home Page - Maximilian Weber</title>
@@ -12,10 +30,17 @@
 
 <body>
     <header>
-        <div class="header__name">Maximilian Weber</div>
+        <div class="header__left">
+            <div class="header__left__name">
+                Maximilian Weber
+            </div>
+            <div class="header__left__title">
+                lightweight portfolio
+            </div>
+        </div>
         <div class="header__chooseLang">
             <a href="http://maximilianweber.com" class="a--reset">
-                <svg class="svg__lang" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                <svg class="svg__lang active-lang" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
                     xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events"
                     xmlns:cc="http://web.resource.org/cc/" xmlns:xlink="http://www.w3.org/1999/xlink"
                     xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg"
@@ -53,23 +78,27 @@
     </header>
     <main>
         <h1 class="">
-            Hello. My Name is Maximilian Weber, I am 19 years old and this is my lightweight portfolio
+            Hello. My Name is Maximilian Weber, I am 19 years old and a software developer based in Osnabrueck, Germany.
         </h1>
         <h2>
             Use the Terminal to navigate in the menu
         </h2>
         <p>
             Choose between the commands:
-            <a>About</a>
-            <a>Projects</a>
-            <a>Contact</a>
+            <a class="w-600">About</a>,
+            <a class="w-600">Projects</a>,
+            <a class="w-600">Contact</a>
         </p>
         <div class="terminal">
-
+            <div class="terminal__head">
+                <div class="terminal__head__dot bg-color__red"></div>
+                <div class="terminal__head__dot bg-color__yellow"></div>
+                <div class="terminal__head__dot bg-color__green"></div>
+            </div>
         </div>
     </main>
     <footer>
-        <a href="./imprint.html">Imprint</a>
+        <a href="./imprint.html" class="margin__right--1">Imprint</a>
         <a href="./privacy-policy.html">Privacy Policy</a>
     </footer>
 </body>

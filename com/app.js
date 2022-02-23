@@ -27,6 +27,16 @@ function showContact() {
     document.getElementById('contact').classList.add('active');
 }
 
+function setTheme() {
+    const html = document.getElementById('html').classList;
+    console.log(document.getElementById('switch').value);
+    if(document.getElementById('switch').checked === true) {
+        html.add('dark');
+        return ;
+    }
+    html.remove('dark');
+}
+
 document.addEventListener('keyup', function (event) {
     const inputValue = document.getElementById('input').value.toLowerCase();
     const inputClasslist = document.getElementById('input').classList;

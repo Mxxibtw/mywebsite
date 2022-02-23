@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Regular.ttf') format('trueType');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Medium.ttf') format('trueType');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-SemiBold.ttf') format('trueType');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    src: url('./fonts/fira_code/FiraCode-Bold.ttf') format('trueType');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-main-background: #ededed;
+    --color-main-font: #2a2a2a;
+    --color-terminal-bg: #272822;
+    --color-black: #000000;
+    --color-border-active-lang: #CF142B;
+    --color-red: #FF5F5A;
+    --color-yellow: #FFBE2E;
+    --color-green: #2ACA44;
+    --color-java-green: #8AE234;
+    --color-light-blue: #729FCF;
+    --color-twitter-blue: #1DA1F2;
+    --family-main-font: 'Fira Code', Ariel, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    background-color: var(--color-main-background);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--color-main-font);
+    font-family: var(--family-main-font);
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem 1rem;
+}
+
+main {
+    padding: 1.5rem 20vw 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    line-height: 4rem;
+}
+
+footer {
+    text-align: center;
+    padding: 0 0 5rem;
+}
+
+input {
+    background-color: inherit;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: red;
+    font-family: var(--family-main-font);
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    margin: -.1rem 0 0 .2rem;
+    font-weight: 600;
+    caret-color: var(--color-main-background);
+    width: 100%;
+}
+
+input.valid {
+    color: green;
+}
+
+.a--reset,
+.a--reset:hover,
+.a--reset:active,
+.a--reset:visited,
+.a--reset:focus {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.fw--600 {
+    font-weight: 600;
+}
+
+.fw--700 {
+    font-weight: 700;
+}
+
+.cursor--pointer {
+    cursor: pointer;
+}
+
+.margin__right--1 {
+    margin-right: 1rem;
+}
+
+.bg-color__red {
+    background-color: var(--color-red);
+}
+
+.bg-color__yellow {
+    background-color: var(--color-yellow);
+}
+
+.bg-color__green {
+    background-color: var(--color-green);
+}
+
+.t-color__java-green {
+    color: var(--color-java-green);
+}
+
+.t-color__light-blue {
+    color: var(--color-light-blue);
+}
+
+.fill--color-main {
+    fill: var(--color-main-background);
+}
+
+.fill--color-main:hover {
+    fill: var(--color-twitter-blue);
+}
+
+.svg__lang {
+    height: 3rem;
+    width: auto;
+    border: var(--color-black) solid 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.active-lang {
+    border-color: var(--color-border-active-lang);
+}
+
+.terminal {
+    margin-top: 2rem;
+    align-self: center;
+    width: 98%;
+    height: 65rem;
+    background-color: var(--color-terminal-bg);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terminal__head {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.terminal__head__dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.terminal__input {
+    width: 95%;
+    display: flex;
+    align-items: row;
+    color: var(--color-main-background);
+}
+
+.terminal__output {
+    width: 95%;
+    color: var(--color-main-background);
+    margin-bottom: 2rem;
+}
+
+.terminal__output__about, .terminal__output__projects, .terminal__output__contact, .terminal__output__fail {
+    display: none;
+}
+
+.active {
+    display: block;
+}

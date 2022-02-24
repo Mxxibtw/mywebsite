@@ -37,8 +37,16 @@ function setTheme() {
     html.remove('dark');
 }
 
+function closeMobileKeyboard() {
+    if(window.getComputedStyle(document.querySelector('.terminal')).getPropertyValue('min-height') === '650px') return ;
+    document.getElementById('input').blur();
+    $('input').blur();
+}
+
 document.addEventListener('keyup', function (event) {
     const inputValue = document.getElementById('input').value.toLowerCase();
+    if(inputValue === '') return ;
+
     const inputClasslist = document.getElementById('input').classList;
     if(inputValue === 'about' || inputValue === 'projects' || inputValue === 'contact') {
         inputClasslist.add('valid');
@@ -46,6 +54,7 @@ document.addEventListener('keyup', function (event) {
             clearOutput();
             document.getElementById(inputValue).classList.add('active');
             document.getElementById('input').value = '';
+            closeMobileKeyboard();
         }
         return;
     }

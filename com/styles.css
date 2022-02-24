@@ -291,4 +291,8 @@ input:checked + .slider:before {
         line-height: 2rem;
         font-size: 1.3rem;
     }
+
+    .terminal {
+        min-height: 30rem;
+    }
 }

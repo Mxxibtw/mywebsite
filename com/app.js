@@ -29,7 +29,6 @@ function showContact() {
 
 function setTheme() {
     const html = document.getElementById('html').classList;
-    console.log(document.getElementById('switch').value);
     if(document.getElementById('switch').checked === true) {
         html.add('dark');
         return ;
